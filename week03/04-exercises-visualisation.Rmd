@@ -42,30 +42,38 @@ Your code here:
 ```{r}
 
 # Transforming date column to datetime (lubridate package!)
+df = pres |> 
+  mutate(across(c("start", "end"), ~as.Date(.x)))
 
-
+unemp = unemp |> 
+  mutate(date = as.Date(date))
 
 # Creating a line-plot with unemployment and date
-
-
-
+ggplot(unemp, aes(date, unemp))+
+  geom_line()+
 # Adding the rectangle geometry (set axes limits so that background covers entire plot)
-
-
-
+  geom_rect(data = df, aes(xmin = start, xmax = end,
+                           ymin = min(unemp$unemp), ymax = max(unemp$unemp),
+                           fill = party), inherit.aes = F,
+            alpha = .3)+
+  geom_line()+
+  scale_fill_manual("Party of President", values = c('blue', 'red'),
+                    labels = c('Democratic', 'Republican'))+
 # Adding president names
-
-
-
+  geom_text(data = df, aes(start, .1, label = name), angle = 90, vjust = "right", 
+            size = 3)+
 # Adding lines to separate presidencies
-
-
-
+  geom_vline(data = df, aes(xintercept = start), linetype = 2, alpha = .8)+
 # Finally, moving legend and removing x axis title
-
-
-
+  theme(legend.position = 'bottom',
+        # panel.background = element_blank(),
+        # panel.border = element_blank()
+        )+
 # Adjusting y axis
+  scale_y_continuous(labels = scales::label_percent(), expand = c(0, 0))+
+  scale_x_continuous( expand = c(0, 0))+
+  ylab('Unemployment Rate')+
+  xlab("")
 
 
 

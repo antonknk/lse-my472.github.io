@@ -25,9 +25,9 @@ folder you would like to store your local copy of your repo. You should replace
 `<url>` with the HTTPS link to your GitHub repo.
 
 ```{bash, eval = FALSE}
-cd <path>
-git _________ <url>
-cd _________
+cd '/Users/anton/Library/CloudStorage/OneDrive-LondonSchoolofEconomics/PhD/MRes courses/MY472_gitrepos'
+git clone git@github.com:antonknk/seminar02.git
+cd seminar02
 ```
 
 Now, save this Rmd file, close it, and move it into your local copy of the 
