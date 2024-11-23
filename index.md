@@ -50,7 +50,7 @@ Office hour slots with all instructors should be booked via LSE's [StudentHub](h
 | 5  | [HTML, CSS, and scraping static pages](#5-html-css-and-scraping-static-pages) |  Ryan Hübert |
 | 6  | _Reading week_ |  
 | 7  | [XML, RSS, and scraping non-static pages](#7-xml-rss-and-scraping-non-static-pages) |  Ryan Hübert |   
-| 8  | [Working with APIs](#8-working-with-apis) |  Ryan Hübert |  
+| 8  | [APIs](#8-apis) |  Ryan Hübert |  
 | 9  | [Other data types](#9-other-data-types) |  Ryan Hübert |  
 | 10 | [Creating and managing databases](#10-creating-and-managing-databases) |  Ryan Hübert |  
 | 11 | [Interacting with online databases](#11-nosql-and-cloud-databases)|  Ryan Hübert |  
@@ -158,14 +158,22 @@ We will learn how to work with unstructured data in the form of text and discuss
 
 #### Lecture
 
-- [Slides](x)
-- Code: [Regular expressions in R](x), [text analysis](x), [parsing pdfs](x)
-- Data: [Sample texts](x), [Keynes' "General Theory" cover](x)
+- [Slides](week04/MY472-week04-text.pdf)
+- Code: [Encoding and regex](week04/01-encoding-regex.Rmd), [text analysis](week04/02-text-analysis.Rmd), [parsing pdfs](week04/03-parsing-pdfs.Rmd)
+- Data: 
+	- [Keynes' "General Theory" cover](week04/data/general_theory_cover.pdf)
+	- [Methodology about us (UTF-8)](week04/data/methodology-8.txt)
+	- [Methodology about us (UTF-16)](week04/data/methodology-16.txt)
+	- [Methodology about us (UTF-32)](week04/data/methodology-32.txt)
+	- [UTF example (8-bit)](week04/data/utf-examples-8.txt)
+	- [UTF example (16-bit)](week04/data/utf-examples-16.txt)
+	- [UTF example (32-bit)](week04/data/utf-examples-32.txt)
+	- [Shanghai](week04/data/shanghai.txt)
 
 #### Seminar
 
-- Code: [Exercises in text analysis](x), [solution](x)
-- Data: [UoL institutions](x)
+- Code: [Exercises in text analysis](week04/04-exercises-text-analysis.Rmd), [solution](week04/04-exercises-text-analysis-solution.Rmd)
+- Data: [news article](week04/data/news-article-1.txt), [UoL institutions](week04/data/uol.txt) 
 
 
 #### Reading
@@ -174,7 +182,7 @@ We will learn how to work with unstructured data in the form of text and discuss
 
 #### Further reading
 - Wickham, Hadley and Garett Grolemund.  2017, [Chapter 14](http://r4ds.had.co.nz/strings.html)
-- [Regular expressions cheat sheet](x)
+- [Regular expressions cheat sheet](https://github.com/rstudio/cheatsheets/blob/main/regex.pdf)
 - [Regular expressions in R vignette](https://cran.r-project.org/web/packages/stringr/vignettes/regular-expressions.html)
 
 
@@ -184,13 +192,14 @@ This week we cover the basics of web scraping for tables and unstructured data f
 
 #### Lecture
 
-- [Slides](x)
-- Code: [Website example](x), [selecting elements](x), [scraping tables](x)
+- [Slides](week05/MY472-week05-scraping-1.pdf)
+- Examples: [Website example 1](week05/data/html1.html), [Website example 2](week05/data/html2.html), [Website example 3](week05/data/html3.html), [Website example 4](week05/data/css1.html), [Website example 5](week05/data/css2.html)
+- Code: , [selecting elements](week05/01-selecting-elements.Rmd), [scraping tables](week05/02-scraping-tables.Rmd)
 
 
 #### Seminar
 
-- Code: [Scraping unstructured data](x), [solution](x)
+- Code: [Scraping unstructured data](week05/03-exercises-scraping-unstructured-data.Rmd), [solution](week05/03-exercises-scraping-unstructured-data-solution.Rmd)
 
 
 #### Reading
@@ -219,12 +228,12 @@ Continuing from the material covered in Week 5, we will learn the advanced topic
 
 #### Lecture
 
-- [Slides](x)
-- Code: [Scraping RSS](x), [introduction to RSelenium](x), [RSelenium example with the LSE website](x)
+- [Slides](week07/MY472-week07-scraping-2.pdf)
+- Code: [Scraping RSS](week07/01-newspaper-rss.Rmd), [introduction to RSelenium](week07/02-introduction-to-selenium.Rmd), [RSelenium example with the LSE website](week07/03-selenium-lse.Rmd)
 
 #### Seminar
 
-- Code: [Scraping UK election data](x), [solution](x)
+- Code: [Scraping UK election data](week07/04-exercises-advanced-scraping.Rmd), [solution](week07/04-exercises-advanced-scraping-solution.Rmd)
 
 
 #### Reading
@@ -240,19 +249,20 @@ Continuing from the material covered in Week 5, we will learn the advanced topic
 * Mozilla Developer Web Docs. [_A First Splash into JavaScript_](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/A_first_splash).
 
 
-### 8. Working with APIs
+### 8. APIs
 
 This week discusses how to work with Application Programming Interfaces (APIs) that offer developers and researchers access to data in a structured format. 
 
 #### Lecture
 
-- [Slides](x)
-- Code: [JSON in R](x), [AIC API](x)
-
+- [Slides](week08/MY472-week08-APIs.pdf)
+- Code: [JSON in R](week08/01-json-in-r.Rmd), [AIC API](week08/02-aic-api.Rmd)
+- Data: [example_1.json](week08/data/example_1.json), [example_2.json](week08/data/example_2.json), [example_3.json](week08/data/example_3.json)
+- Extra example: [Google Maps API](week08/google-maps-example.R)
 
 #### Seminar
 
-- Code: [NY Times API](x), [NY Times API solution](x)
+- Code: [NY Times API](week08/03-nyt-api.Rmd), [NY Times API solution](week08/03-nyt-api-solution.Rmd)
 
 
 #### Reading
